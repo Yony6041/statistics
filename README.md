@@ -7,7 +7,7 @@
 
 <hr />
 
- <img src="https://i.gifer.com/74pZ.gif" width="500px">
+ <img src="https://i.gifer.com/74pZ.gif" width="px">
 
 
   <p align="center">
