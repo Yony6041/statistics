@@ -8,13 +8,13 @@
 <hr />
 
  <img src="https://i.gifer.com/74pZ.gif" width="px">
-
+****
 
   <p align="center">
     In this repository you'll find all the homework associated with our statistics university course 📊!
     <br />
   </p>
-</div>
+</div>****
 
 
 <!-- TABLE OF CONTENTS -->
@@ -29,21 +29,20 @@
     - [Recommended software \& tools](#recommended-software--tools)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-  - [Running the app](#running-the-app)
 - [Course Outline](#course-outline)
   - [Syllabus](#syllabus)
   - [Learning Objectives](#learning-objectives)
 - [Homework Assignments](#homework-assignments)
   - [Homework 1](#homework-1)
+    - [Running the homework](#running-the-homework)
   - [Homework 2](#homework-2)
   - [Homework 3](#homework-3)
 - [Resources](#resources)
   - [Recommended Books](#recommended-books)
   - [Online Materials](#online-materials)
-  - [Software and Tools](#software-and-tools)
-- [The team](#the-team)
-    - [Student \& Computer scientist](#student--computer-scientist)
-    - [Student \& Mathematician](#student--mathematician)
+- [The students team](#the-students-team)
+    - [Yonathan Berith Jaramillo Ramírez.](#yonathan-berith-jaramillo-ramírez)
+    - [Mathematician](#mathematician)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -90,6 +89,7 @@ To get a local copy up and running follow these simple example steps.
 - Code editor: [Visual Studio Code](https://code.visualstudio.com/)
 - Operating System: [Ubuntu 23.04](https://ubuntu.com/download/desktop)
 
+
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
@@ -103,7 +103,7 @@ This is an example of how to list things you need to use the software and how to
 
   <!-- Installation Links -->
   
-  | [R Installation](https://kinsta.com/blog/how-to-install-node-js/) | [Python Installation](https://heynode.com/tutorial/install-nodejs-locally-nvm/) |
+  | [R Installation](https://techvidvan.com/tutorials/install-r/) | [Python Installation](https://www.makeuseof.com/install-python-ubuntu/) |
 
 </div>
 
@@ -126,41 +126,53 @@ This is an example of how to list things you need to use the software and how to
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Running the app
-
-1. Initialize docker container
-```bash
-$ npm run db:local:start
-```
-2. Development (watch mode)
-```bash
-$ npm run start:dev
-```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Course Outline
 <div align = "center">
  <img src="https://cdnl.tblsft.com/sites/default/files/pages/_data_visualization_definition.gif" width="px">
 </div>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Syllabus
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Learning Objectives
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 # Homework Assignments
 <div align = "center">
  <img src="https://media.tenor.com/vHi81kJ7ad0AAAAM/homework-time.gif" width="500px">
 </div>
 
 ## Homework 1
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Running the homework
+
+1. Initialize docker container
+```bash
+$ python3 ...
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Homework 2
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ## Homework 3
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Resources
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Recommended Books
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Online Materials
-## Software and Tools
 
 
 
@@ -169,14 +181,17 @@ $ npm run start:dev
 
 
 
-# The team 
+# The students team 
 <img src="https://www.godfrey.com/application/files/2516/5594/4141/sg-blog-trdshw-pr-p1.gif" width="px">
 
 
-### Student & Computer scientist
+### Yonathan Berith Jaramillo Ramírez.
+Computer scientist
+- [Github](https://github.com/Yony6041)
+- [LinkedIn](https://www.linkedin.com/in/yonathan-jaramillo-a506181a7/?originalSubdomain=mx)
 
-- Yonathan Berith Jaramillo Ramírez.
-
-### Student & Mathematician
+### Mathematician
 
 - Dalia Viridiana Martinez Retiz.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
