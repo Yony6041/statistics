@@ -1,0 +1,5 @@
+1. Move all your code to multiple python files.
+2. Add link to Overleaf
+3. 
+4. Add pdf with the final version ofg the homework
+5. Finish adding information to the ReadMe 
