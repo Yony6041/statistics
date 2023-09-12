@@ -41,11 +41,12 @@ Para cada $x\in\mathbb{R}$, sea $f_x$ el número de observaciones recolectadas, 
 Podemos definir una función, que corresponda a la frecuencia relativa acumulada de la muestra observada: $F:\mathbb{R}\rightarrow [0,1]$, $F(x):=\frac{f_x}{n}$
 """
 
-n = int(input("Tamaño de la muestra: "))
+n = 18
+
 
 """Creamos una muestra aleatoria de enteros."""
 
-randomlist = np.random.choice(range(1,15), size = n)
+randomlist = np.array([31, 35, 37, 40, 40, 51, 54, 55, 57, 58, 60, 60, 62, 62, 65, 67, 75, 89])
 print(randomlist)
 
 values = sorted(set(randomlist))
@@ -106,7 +107,9 @@ def Q_1(data):
 def Q_2(data):
   return percentil(data, 0.5)
 
-de
+def Q_3(data):
+  return percentil(data, 0.5)
+
 def IQR(data):
   return Q_3(data)-Q_1(data)
 
