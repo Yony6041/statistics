@@ -47,4 +47,6 @@ def calculate_frequencies(grade_list: np.ndarray):
         os.makedirs('../results')
     
     plt.savefig(f'../results/relativeFrequency-{filename_letter}.png')
+    plt.clf()
+    
     print("The graph of the relative frequencies can be found in the results directory!")

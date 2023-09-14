@@ -6,18 +6,13 @@ from frequencies import *
 from centralTendency import *
 from measuresOfDispersion import *
 from measuresOfSymmetry import *
-
-
-
-
-
-
+from histogram import *
+from boxplot import *
 
 # Question a
 print("==================================================")
 print("==========           Solving question a           ==========")
 print("==================================================")
-
 
 # Original list of student grades
 studentGrades = [31, 35, 37, 40, 40, 51, 54, 55, 57, 58, 60, 60, 62, 62, 65, 67, 75, 89]
@@ -25,7 +20,6 @@ studentGrades = [31, 35, 37, 40, 40, 51, 54, 55, 57, 58, 60, 60, 62, 62, 65, 67,
 calculate_frequencies(studentGrades)
 
 sample_mean, sample_median, Q1, Q2, Q3, IQR, listOutliers, listWithoutOutliers = calculate_centralTendency(studentGrades)
-
 
 print("Calculating dispersion in list with outliers:", listWithoutOutliers)
 calculate_dispersion(studentGrades)
@@ -37,6 +31,18 @@ calculate_symmetry(studentGrades)
 
 print("Calculating symmetry in list without outliers:", listWithoutOutliers)
 calculate_symmetry(listWithoutOutliers)
+
+print("Plotting the histogram and distribution with outliers:", studentGrades)
+plot_frequencies_and_distribution(studentGrades)
+
+print("Plotting the histogram and distribution without outliers:", listWithoutOutliers)
+plot_frequencies_and_distribution(listWithoutOutliers)
+
+print("Plotting the boxplot with outliers:", studentGrades)
+plot_boxplots(studentGrades)
+
+print("Plotting the boxplot without outliers:", listWithoutOutliers)
+plot_boxplots(listWithoutOutliers)
 
 
 # Question b
@@ -66,8 +72,18 @@ calculate_symmetry(lostLabourDays)
 print("Calculating symmetry in list without outliers:", listWithoutOutliers)
 calculate_symmetry(listWithoutOutliers)
 
+print("Plotting the histogram and distribution with outliers:", lostLabourDays)
+plot_frequencies_and_distribution(lostLabourDays)
 
 
+print("Plotting the histogram and distribution without outliers:", listWithoutOutliers)
+plot_frequencies_and_distribution(listWithoutOutliers)
+
+print("Plotting the boxplot with outliers:", lostLabourDays)
+plot_boxplots(lostLabourDays)
+
+print("Plotting the boxplot without outliers:", listWithoutOutliers)
+plot_boxplots(listWithoutOutliers)
 
 
 # Question c
@@ -96,9 +112,17 @@ calculate_symmetry(healthToHeightRatio)
 print("Calculating symmetry in list without outliers:", listWithoutOutliers)
 calculate_symmetry(listWithoutOutliers)
 
+print("Plotting the histogram and distribution with outliers:", healthToHeightRatio)
+plot_frequencies_and_distribution(healthToHeightRatio)
 
+print("Plotting the histogram and distribution without outliers:", listWithoutOutliers)
+plot_frequencies_and_distribution(listWithoutOutliers)
 
+print("Plotting the boxplot with outliers:", lostLabourDays)
+plot_boxplots(lostLabourDays)
 
+print("Plotting the boxplot without outliers:", listWithoutOutliers)
+plot_boxplots(listWithoutOutliers)
 
 # Question d
 print("==================================================")
@@ -132,4 +156,16 @@ for column in mtcars_df.columns:
     print("Calculating symmetry in list without outliers:")
     calculate_symmetry(listWithoutOutliers)
 
+    print("Plotting the histogram and distribution with outliers:", mtcars_df[column])
+    plot_frequencies_and_distribution(mtcars_df[column])
 
+    print("Plotting the histogram and distribution without outliers:", listWithoutOutliers)
+    plot_frequencies_and_distribution(listWithoutOutliers)
+    
+    print("Plotting the boxplot with outliers:", mtcars_df[column])
+    plot_boxplots(mtcars_df[column])
+
+    print("Plotting the boxplot without outliers:", listWithoutOutliers)
+    plot_boxplots(listWithoutOutliers)
+    
+    
