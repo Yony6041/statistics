@@ -6,7 +6,6 @@ from centralTendency import *
 
 # Question a
 print("Question a")
-
 # Original list of student grades
 studentGrades = [31, 35, 37, 40, 40, 51, 54, 55, 57, 58, 60, 60, 62, 62, 65, 67, 75, 89]
 
