@@ -1,66 +1,50 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import string
+import os
+from typing import List, Union
 
-"""
-Count the number of grades in a list that are less than or equal to a given value.
+# Global variable to keep track of the last used filename
+last_used_index = -1
 
-Parameters:
-- x (int or float): The value to compare each grade against.
-- grade_list (list): The list of grades to be counted.
-
-Returns:
-- int: The number of grades that are less than or equal to x.
-"""
-def count_grades_less_equal_than_x(x:int, list: [int]):
-   
-    # Use a list comprehension to filter grades that are less than or equal to x
-    filtered_grades = [u for u in list if u <= x]
-    
-    # Return the length of the filtered list, which is the count of grades less than or equal to x
+def count_grades_less_equal_than_x(x:int, grade_list: Union[int, float]) -> int:
+    """
+    Count the number of grades in a list that are less than or equal to a given value.
+    """
+    filtered_grades = [u for u in grade_list if u <= x]
     return len(filtered_grades)
 
-"""
-Calculate the relative frequency of grades that are less than or equal to a given value.
-
-Parameters:
-- x (int or float): The value to compare each grade against.
-- grade_list (list): The list of grades to be counted.
-- n (int): The total number of grades in the list.
-
-Returns:
-- float: The relative frequency of grades that are less than or equal to x.
-"""
-def calculate_relative_frequency(x: int, list: list[int], n: int):
-    # Use the count_grades_less_equal_than_x function to get the count of grades less than or equal to x
-    count = count_grades_less_equal_than_x(x, list)
-    
-    # Calculate and return the relative frequency
+def calculate_relative_frequency(x: int, grade_list: Union[int, float], n: int) -> float:
+    """
+    Calculate the relative frequency of grades that are less than or equal to a given value.
+    """
+    count = count_grades_less_equal_than_x(x, grade_list)
     return count / n
 
-
-def getFrecuencies(list: np.ndarray):
-    # Sort and remove duplicates
-    values = sorted(set(list))
-
-    # Display sorted grades
+def calculate_frequencies(grade_list: np.ndarray):
+    global last_used_index
+    
+    values = sorted(set(grade_list))
     print("Sorted Grades:", sorted(values))
 
-    # Create a dictionary with sorted grades
     grades_dict = {"x_" + str(i + 1): values[i] for i in range(len(values))}
     print("Grades Dictionary:", grades_dict)
 
-    # Create a dictionary with frequencies of each grade
-    frequencies = {"g_" + str(i + 1): np.count_nonzero(np.array(list) == values[i]) for i in range(len(values))}
+    frequencies = {"g_" + str(i + 1): np.count_nonzero(np.array(grade_list) == values[i]) for i in range(len(values))}
     print("Frequencies:", frequencies)
-
-    # Sum of frequencies (should match the length of the original list)
     print("Sum of Frequencies:", sum(frequencies.values()))
 
-    # Plot the relative frecuency of the elements in the list
-
     x = [0+0.01*n for n in range(0,10000)]
-    plt.plot(x, [calculate_relative_frequency(i, list, len(list)) for i in x])
-    plt.xlim(0, 100)  # or any value greater than 89
+    plt.plot(x, [calculate_relative_frequency(i, grade_list, len(grade_list)) for i in x])
+    plt.xlim(0, 100)
     plt.ylim(0,1)
-    plt.savefig('../results/relativeFrequency-a.png')
+    
+    last_used_index += 1
+    filename_letter = string.ascii_lowercase[last_used_index % 26]
+    
+    # Check if the directory exists, if not, create it
+    if not os.path.exists('../results'):
+        os.makedirs('../results')
+    
+    plt.savefig(f'../results/relativeFrequency-{filename_letter}.png')
     print("The graph of the relative frequencies can be found in the results directory!")
