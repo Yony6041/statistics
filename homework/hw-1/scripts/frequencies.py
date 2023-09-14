@@ -1,4 +1,6 @@
-    
+import numpy as np
+import matplotlib.pyplot as plt
+
 """
 Count the number of grades in a list that are less than or equal to a given value.
 
@@ -34,3 +36,31 @@ def calculate_relative_frequency(x: int, list: list[int], n: int):
     
     # Calculate and return the relative frequency
     return count / n
+
+
+def getFrecuencies(list: np.ndarray):
+    # Sort and remove duplicates
+    values = sorted(set(list))
+
+    # Display sorted grades
+    print("Sorted Grades:", sorted(values))
+
+    # Create a dictionary with sorted grades
+    grades_dict = {"x_" + str(i + 1): values[i] for i in range(len(values))}
+    print("Grades Dictionary:", grades_dict)
+
+    # Create a dictionary with frequencies of each grade
+    frequencies = {"g_" + str(i + 1): np.count_nonzero(np.array(list) == values[i]) for i in range(len(values))}
+    print("Frequencies:", frequencies)
+
+    # Sum of frequencies (should match the length of the original list)
+    print("Sum of Frequencies:", sum(frequencies.values()))
+
+    # Plot the relative frecuency of the elements in the list
+
+    x = [0+0.01*n for n in range(0,10000)]
+    plt.plot(x, [calculate_relative_frequency(i, list, len(list)) for i in x])
+    plt.xlim(0, 100)  # or any value greater than 89
+    plt.ylim(0,1)
+    plt.savefig('../results/relativeFrequency-a.png')
+    print("The graph of the relative frequencies can be found in the results directory!")
