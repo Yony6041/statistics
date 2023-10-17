@@ -42,7 +42,10 @@
   - [Online Materials](#online-materials)
 - [The students team](#the-students-team)
     - [Yonathan Berith Jaramillo Ramírez.](#yonathan-berith-jaramillo-ramírez)
-    - [Mathematician](#mathematician)
+    - [Dalia Viridiana Martinez Retiz.](#dalia-viridiana-martinez-retiz)
+  - [Mathematician](#mathematician)
+    - [Alejandro Sanchez Campos](#alejandro-sanchez-campos)
+  - [Mathematician](#mathematician-1)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -190,8 +193,12 @@ Computer scientist
 - [Github](https://github.com/Yony6041)
 - [LinkedIn](https://www.linkedin.com/in/yonathan-jaramillo-a506181a7/?originalSubdomain=mx)
 
-### Mathematician
+### Dalia Viridiana Martinez Retiz.
+Mathematician
+-
+### Alejandro Sanchez Campos
+Mathematician
+-
 
-- Dalia Viridiana Martinez Retiz.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
